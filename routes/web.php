@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -18,3 +19,6 @@ Route::post('question/store', [QuestionController::class, 'store'])
         
         
 Route::get('/home', [HomeController::class,'index']);
+
+Route::get('dashboard', [DashboardController::class, 'index'])
+		->name('dashboard');
